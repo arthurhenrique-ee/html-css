@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
         <h1>Meu site</h1>
-        <nav>
+        <i id="burguer" class="bi bi-list" onclick="abrirMenu()"></i>
+        <nav id="menu">
             <a href="#">Opção 1</a>
             <a href="#">Opção 2</a>
             <a href="#">Opção 3</a>
@@ -26,9 +29,20 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus error dolorum eligendi aliquam, quibusdam quod amet doloremque repellat accusantium? Dolor numquam sequi aliquid dolorum modi consectetur quidem error fugiat libero!</p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque provident adipisci modi possimus unde accusamus, quisquam assumenda vero obcaecati quod dolores eveniet? Rem nihil repellendus illum est porro quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque quia sunt provident expedita voluptatum voluptate saepe repudiandae mollitia, assumenda suscipit cumque soluta, iure asperiores a laboriosam ea eum iusto.</p>
-            
+
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe dolores optio rerum soluta aliquam, officia, nobis quisquam, et modi delectus molestiae sunt earum. Harum eius temporibus maiores neque iure nesciunt.</p>
         </article>
     </main>
+
+    <script>
+        function abrirMenu() {
+            let menu = document.getElementById('menu')
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
