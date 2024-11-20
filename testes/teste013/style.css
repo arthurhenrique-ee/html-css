@@ -12,3 +12,146 @@
     --branco: #FFFFFF;
 }
 
+
+/* ESTILIZAÇÃO GERAL */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #0A0A0A;
+}
+
+h1 {
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 40px;
+}
+
+section {
+    padding: 60px 10%;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/* CABEÇALHO */
+header .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 50px;
+}
+
+.cabecalho .social i {
+    font-size: 15px;
+    margin: 10px;
+    transition: .3s;
+}
+
+.cabecalho .social i:hover {
+    color: #E5BF4A;
+}
+
+.cabecalho .contato a {
+    padding: 10px 20px;
+    border: 1px solid #E5BF4A;
+    text-decoration: none;
+    color: #E5BF4A;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.cabecalho .contato a:hover {
+    background-color: #E5BF4A;
+    color: #FFFFFF;
+}
+
+.menu-desktop {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.menu-desktop a {
+    position: relative;
+    padding-bottom: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.menu-desktop a:hover {
+    color: #E5BF4A;
+    border-bottom: 1px solid #E5BF4A;
+}
+
+/* HOME */
+section.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(imagens/banner-inicio.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home .txt h1 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.home .txt a {
+    padding: 20px 30px;
+
+    border: 1px solid #E5BF4A;
+    background-color: #E5BF4A;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0A0A0A;
+    transition: .3s;
+}
+
+.home .txt a:hover {
+    background: transparent;
+    color: #E5BF4A;
+    transform: scale(1.1);
+}
+
+/* ABOUT */
+section.about {
+    padding: 60px 17%;
+}
+
+.about .flex {
+    align-items: center;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.about .txt h2 {
+    font-family: "Poiret One";
+    font-size: 24px;
+    color: #E5BF4A;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.about .txt p {
+    margin-bottom: 20px;
+    font-weight: 300;
+}
