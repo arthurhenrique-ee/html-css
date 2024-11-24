@@ -41,6 +41,23 @@ section {
     display: flex;
 }
 
+.botao {
+    padding: 20px 30px;
+
+    border: 1px solid #E5BF4A;
+    background-color: #E5BF4A;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0A0A0A;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: transparent;
+    color: #E5BF4A;
+    transform: scale(1.02);
+}
 
 /* CABEÇALHO */
 header .cabecalho {
@@ -114,24 +131,6 @@ section.home {
     font-weight: 300;
 }
 
-.home .txt a {
-    padding: 20px 30px;
-
-    border: 1px solid #E5BF4A;
-    background-color: #E5BF4A;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 14px;
-    color: #0A0A0A;
-    transition: .3s;
-}
-
-.home .txt a:hover {
-    background: transparent;
-    color: #E5BF4A;
-    transform: scale(1.1);
-}
-
 /* ABOUT */
 section.about {
     padding: 60px 17%;
@@ -154,4 +153,90 @@ section.about {
 .about .txt p {
     margin-bottom: 20px;
     font-weight: 300;
+}
+
+
+/* CAKES */
+section.cakes {
+    padding: 60px 6%;
+    display: flex;
+    align-items: center;
+}
+
+.cakes .arrow {
+    color: #E5BF4A;
+    opacity: 0.5;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cakes .arrow:hover {
+    opacity: 1;
+}
+
+.cakes .slider {
+    overflow: hidden;
+}
+
+.cakes .slider .flex {
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+}
+
+.cakes .slider .txt .nome {
+    font-family: "Poiret One", sans-serif;
+    font-size: 24px;
+    margin: 10px 0px;
+}
+
+.cakes .slider .txt .preco {
+    font-size: 20px;
+    font-weight: 300;
+    color: #E5BF4A;
+}
+
+/* BLOG */
+section.blog {
+    padding: 60px 0%;
+}
+
+.blog .title-blog {
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 8%;
+}
+
+.blog .box-blog .txt {
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    height: 370px;
+    padding: 30px;
+}
+
+.blog .box-blog .txt h2 {
+    font-family: "Poiret One", sans-serif;
+    color: #E5BF4A;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.blog .box-blog .txt p {
+    margin: 20px 0px;
+    font-weight: 300;
+}
+
+.blog .box-blog .txt a {
+    border-bottom: 2px solid #E5BF4A;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #E5BF4A;
+    transition: .5s;
+}
+
+.blog .box-blog .txt a:hover {
+    letter-spacing: 1px;
 }
