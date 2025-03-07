@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    background: url('imagens/fundobg.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    height: 100dvh;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    padding: 30px 20px;
+    width: 100%;
+    
+    background-color: #fff;
+    box-shadow: 0 0 15px #00000025;
+}
+
+.menu-desktop {
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+}
+
+.menu-desktop .links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    margin: 0 20px;
+}
+
+.menu-desktop .links a:hover {
+    text-decoration: underline;
+}
+
+.menu-desktop .buttons button {
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* MODAL LOGIN */
+.fundo-modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+
+    background-color: #00000057;
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    transform: translateY(-10%);
+    opacity: 0;
+    z-index: 999;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.fundo-modal.ativo {
+    transform: translateY(0);
+    pointer-events: all;
+    opacity: 1;
+}
+
+.fundo-modal .fechar-modal {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#modal-login .modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px;
+    width: 350px;
+    height: 450px;
+
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 999999;
+}

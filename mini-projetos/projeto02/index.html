@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 02</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <header>
+        <section class="menu-desktop">
+            <nav class="links">
+                <a href="#">Início</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Serviços</a>
+                <a href="#">Apresentação</a>
+                <a href="#">Contato</a>
+            </nav>
+
+            <div class="buttons">
+                <button class="btn-search">
+                    <i class="bi bi-search"></i>
+                </button>
+
+                <button class="btn-login">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+            </div>
+        </section>
+    </header>
+
+
+    <div class="fundo-modal" id="modal-login">
+
+        <button class="fechar-modal">&times;</button>
+
+        <div class="modal">
+            <form action="#" class="container" method="post">
+                <h1 class="login-title">Log In</h1>
+
+                <section class="input-box">
+                    <input type="text" name="username" id="username" placeholder="Usuário">
+                </section>
+
+                <section class="input-box">
+                    <input type="password" name="password" id="password" placeholder="Senha" maxlength="8">
+                </section>
+            </form>
+        </div>
+    </div><!-- MODAL LOGIN -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
