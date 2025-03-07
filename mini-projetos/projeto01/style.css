@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url('imagens/fundobg.jpg') no-repeat center center;
+    background-size: cover;
+
+    height: 100dvh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+
+    border-radius: 15px;
+    width: 350px;
+    padding: 25px;
+
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px 20px #00000020;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title {
+    margin-bottom: 15px;
+}
+
+.input-box {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 20px 10px 40px;
+    border-radius: 100px;
+    border: 3px solid transparent;
+    background-color: #ffffff1c;
+    outline: none;
+    caret-color: #fff;
+    color: #fff;
+    font-weight: 500;
+    transition: .25s;
+}
+
+.input-box input:focus {
+    border: 3px solid #ffffff1f;
+}
+
+.input-box input::placeholder {
+    color: #ffffffa2;
+}
+
+.input-box input::-ms-reveal {
+    filter: invert(100%);
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    font-size: 20px;
+    color: #ffffffa2;
+    transition: .25s;
+}
+
+.input-box input:focus + i {
+    color: #fff;
+}
+
+.remember-forgot-box {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.remember-forgot-box p {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.remember {
+    display: flex;
+    gap: 10px;
+}
+
+.forgot {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px 0;
+    background-color: #0a2d69;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: transparent 3px solid;
+    transition: .1s;
+}
+
+.login-button:focus {
+    outline: #0a2d6981 3px solid;
+}
+
+.dont-have-account {
+    font-weight: normal;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.dont-have-account > a {
+    font-weight: bold;
+    color: #fff;
+}
+
+.dont-have-account > a:hover {
+    text-decoration: none;
+}
