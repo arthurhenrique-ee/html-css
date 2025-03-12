@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url('imagens/fundobg.jpg') no-repeat center;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+
+    position: relative;
+    height: 100dvh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 350px;
+    padding: 40px;
+
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    z-index: 999;
+}
+
+.login-form .login-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.login-form .input-box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 30px 0 0;
+    width: 100%;
+    margin: 15px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.login-form .input-box i {
+    font-size: 1.3em;
+}
+
+.login-form .input-box #mostrar-senha {
+    cursor: pointer;
+}
+
+.login-form .input-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    padding: 10px 0px;
+    font-size: 1em;
+    color: #fff;
+}
+
+.login-form .input-box input::placeholder {
+    color: #ffffffcc;
+}
+
+.login-form .forgot {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 20px 0;
+}
+
+.login-form .forgot a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.login-form .forgot a:hover {
+    text-decoration: none;
+}
+
+.login-form .btn-login {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #283112;
+    color: #fff;
+    box-shadow: 0 0 10px #00000048;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-form .btn-login:hover {
+    opacity: 0.8;
+    transform: scale(0.99);
+}
+
+.login-form .register {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.login-form .register p a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-form .register p a:hover {
+    text-decoration: none;
+}
