@@ -21,3 +21,12 @@ document.getElementById('prev').addEventListener('click', () => {
     }
     showSlide(cont)
   });
+
+
+setInterval(() => {
+    cont += 1;
+    if (cont >= slides.length) {
+        cont = 0
+    }
+    showSlide(cont)
+}, 5000);
