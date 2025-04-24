@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="interface">
+        <h1>BankOne</h1>
+
+        <div class="saldo">
+            <h2>Saldo</h2>
+            <div class="valor-saldo">R$0,00</div>
+        </div>
+
+        <div class="fluxo">
+            <div class="receitas">
+                <h2>Receitas</h2>
+                <div class="valor-receitas">R$0,00</div>
+            </div>
+            <div class="despesas">
+                <h2>Despesas</h2>
+                <div class="valor-despesas">R$0,00</div>
+            </div>
+        </div>
+
+        <div class="transacao">
+            <h2>Nova Transação</h2>
+            <div class="input-box">
+                <input type="number" name="valor" id="valor" placeholder="R$0,00">
+            </div>
+            <div class="input-box">
+                <input type="radio" name="rec-desp" id="receita" value="receita">
+                <label for="receita">Receita</label>
+            </div>
+            <div class="input-box">
+                <input type="radio" name="rec-desp" id="despesa" value="despesa">
+                <label for="despesa">Despesa</label>
+            </div>
+
+            <button class="confirm">Confirmar</button>
+        </div>
+
+    </div>
+</body>
+</html>
