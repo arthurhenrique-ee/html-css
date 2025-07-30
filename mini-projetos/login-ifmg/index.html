@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- ESTILOS CSS -->
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/responsive.css" media="screen">
+
+    <!-- JAVASCRIPT -->
+    <script src="scripts/validation.js" defer></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <main>
+        <section class="logo">
+            <img src="imagens/logo-semfundo.png" alt="Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais">
+        </section>
+
+        <section class="login">
+            <div class="box-input">
+                <input type="text" name="usuario" id="usuario" placeholder="Usuário" required>
+            </div>
+            <div class="box-input">
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            </div>
+
+            <a href="#">
+                <button class="btn-entrar">
+                    Entrar
+                </button>
+            </a>
+
+            <a href="#" class="forgot">Esqueceu a senha?</a>
+        </section>
+    </main>
+
+    <div class="login-incorreto">
+        <p>Login incorreto! Tente novamente.</p>
+    </div>
+
+    <div class="welcome">
+        <p>Seja bem-vindo!</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url("../imagens/banner-mobile.jpeg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: -1000;
+}
+
+main {
+    margin: 0 auto;
+    text-align: center;
+    min-width: 300px;
+}
+
+section.logo {
+    margin: 30px 0;
+}
+
+section.logo img {
+    width: 150px;
+}
+
+section.login .box-input {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.box-input input {
+    outline: none;
+    font-size: 16px;
+    border-radius: 100px;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+button.btn-entrar {
+    background-color: #1A6326;
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button.btn-entrar:hover {
+    background-color: #175722;
+}
+
+a.forgot {
+    display: block;
+    margin: 20px 0;
+    color: #fff;
+}
+
+a.forgot:hover {
+    text-decoration: none;
+}
+
+.login-incorreto, .welcome {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.login-incorreto {
+    background-color: darkred;
+    color: #fff;
+}
+
+.welcome {
+    background-color: #175722;
+    color: #fff;
+}
