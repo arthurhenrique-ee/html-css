@@ -23,6 +23,11 @@ body {
     margin: 0 auto;
 }
 
+main .cadastro.active,
+main .contatos.active {
+    display: block;
+}
+
 
 /* MENU PRINCIPAL */
 header {
@@ -50,15 +55,22 @@ main {
     padding: 40px 3%;
 }
 
+
+/* ESTILIZAÇÃO MAIN */
 main h1 {
     font-size: 32px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 main h1 span {
     font-weight: 900;
     color: var(--azul);
+}
+
+/* CADASTRO */
+main .cadastro {
+    display: none;
 }
 
 main .box-input {
@@ -102,4 +114,27 @@ main .cadastro .btn-salvar {
 
 main .cadastro .btn-salvar:hover {
     background-color: #36b2b4;
+}
+
+
+/* LISTA DE CONTATOS */
+main .contatos {
+    display: none;
+}
+
+main .contatos .item-list {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+}
+
+main .contatos .item-list .nome {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+main .contatos .item-list p.tel, p.email {
+    display: inline-block;
+    margin-right: 10px;
+    color: #616161;
 }

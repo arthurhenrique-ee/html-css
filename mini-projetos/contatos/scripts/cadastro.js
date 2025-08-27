@@ -9,14 +9,14 @@ btnCadastro.addEventListener("click", ()=> {
         alert('Preencha todos os campos!')
     } else {
         // ARMAZENA OS DADOS
-        let usuario = {
+        let contato = {
             nome: nome.value,
             email: email.value,
             telefone: telefone.value
         }
-        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
-        usuarios.push(usuario)
-        localStorage.setItem("usuarios", JSON.stringify(usuarios))
+        let contatos = JSON.parse(localStorage.getItem("contatos")) || []
+        contatos.push(contato)
+        localStorage.setItem("contatos", JSON.stringify(contatos))
 
         // LIMPA OS CAMPOS
         inputs.forEach(input => {
