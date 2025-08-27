@@ -6,4 +6,13 @@ let listaContatos = document.querySelector('.contatos')
 btnNovo.addEventListener("click", ()=> {
     formCadastro.classList.add('active')
     listaContatos.classList.remove('active')
+    btnNovo.classList.add('click')
+    btnContatos.classList.remove('click')
+})
+
+btnContatos.addEventListener("click", ()=> {
+    listaContatos.classList.add('active')
+    formCadastro.classList.remove('active')
+    btnContatos.classList.add('click')
+    btnNovo.classList.remove('click')
 })
