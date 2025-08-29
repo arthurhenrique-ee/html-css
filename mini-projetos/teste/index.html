@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Local Storage</title>
+
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="box-input">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" class="input-cad" autocomplete="off">
+    </div>
+
+    <div class="box-input">
+        <label for="email">E-mail: </label>
+        <input type="email" name="email" id="email" class="input-cad" autocomplete="off">
+    </div>
+
+    <div class="box-input">
+        <label for="nasc">Data de nascimento: </label>
+        <input type="date" name="nasc" id="nasc" class="input-cad">
+    </div>
+
+    <div class="box-input">
+        <label for="cpf">CPF: </label>
+        <input type="number" name="cpf" id="cpf" class="input-cad" autocomplete="off">
+    </div>
+
+    <div class="box-input">
+        <label for="telefone">Telefone: </label>
+        <input type="tel" name="telefone" id="telefone" class="input-cad" autocomplete="off">
+    </div>
+
+    <div class="box-input">
+        <label for="prof">Profissão: </label>
+        <input type="text" name="prof" id="prof" class="input-cad" autocomplete="off">
+    </div>
+
+    <button class="btn-cadastro">Cadastrar</button>
+
+
+    <div class="buscar">
+        <h1>Pesquisar Usuário</h1>
+        <div class="box-input">
+            <label for="search">Nome do usuário: </label>
+            <input type="text" name="search" id="search" autocomplete="off">
+            <button class="btn-buscar">Pesquisar</button>
+        </div>
+
+        <div class="result"></div>
+    </div>
+</body>
+</html>
