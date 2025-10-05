@@ -1,0 +1,14 @@
+@media (max-width: 900px) {
+    header {
+        justify-content: space-between;
+        padding: 30px 40px;
+    }
+
+    header .menu-desktop {
+        display: none;
+    }
+
+    header .buttons .btn-menu {
+        display: block;
+    }
+}
