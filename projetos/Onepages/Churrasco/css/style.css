@@ -11,7 +11,7 @@
 }
 
 .interface {
-    max-width: 1280px;
+    max-width: 1380px;
     padding: 0 5%;
     margin: 0 auto;
 }
@@ -112,30 +112,64 @@ section.menu {
     background-color: #F9F9F9;
 }
 
+section.menu .title-section {
+    color: #3C3B3B;
+}
+
 .menu .container-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin: 50px 0;
 }
 
 .menu .item-menu {
     display: flex;
     flex-flow: column nowrap;
-    gap: 50px;
+    gap: 30px;
     text-align: center;
     margin: 0 10px;
 }
 
+.menu .item-menu:hover .capa .overlay {
+    opacity: 0.6;
+}
+
+.menu .item-menu:hover .capa img {transform: scale(1.05);}
+
 .menu .item-menu .capa {
+    position: relative;
     overflow: hidden;
     width: 100%;
     border-radius: 100%;
 }
 
-.menu .item-menu .capa img {
-    width: 100%
+.menu .item-menu .capa .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #FF7200;
+    opacity: 0;
+    transition: .5s;
+    z-index: 999;
 }
 
-.menu .item-menu .descricao {
-    
+.menu .item-menu .capa img {
+    width: 100%;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.menu .item-menu .descricao h2 {
+    color: #FF7200;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.menu .item-menu .descricao p {
+    font-weight: 200;
+    margin-top: 30px;
+    line-height: 1.4;
 }
