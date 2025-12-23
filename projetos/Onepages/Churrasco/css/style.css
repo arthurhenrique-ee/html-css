@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ESTILIZAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.interface {
+    max-width: 1280px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section:not(.home) {
+    padding: 80px 0;
+}
+
+.title-section {
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* HEADER */
+header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+}
+
+header nav.menu-desktop ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3C3B3B;
+    padding: 100% 15px;
+    transition: .2s;
+}
+
+header nav.menu-desktop ul li a:hover {
+    background-color: #3C3B3B;
+    color: #fff;
+
+}
+
+
+/* HOME */
+section.home {
+    position: relative;
+    background: url('../img/banner-home.jpg') no-repeat center center;
+    background-size: cover;
+    height: 85.2vh;
+}
+
+.home .overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
+
+.home #texto-home {
+    position: absolute;
+    z-index: 10;
+
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home #texto-home h1 {
+    font-size: 90px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 8px #00000098;
+}
+
+.home #texto-home h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 20px;
+}
+
+
+/* CARDÁPIO */
+section.menu {
+    background-color: #F9F9F9;
+}
+
+.menu .container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .item-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.menu .item-menu .capa {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.menu .item-menu .capa img {
+    width: 100%
+}
+
+.menu .item-menu .descricao {
+    
+}
