@@ -10,6 +10,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .interface {
     max-width: 1380px;
     padding: 0 5%;
@@ -17,7 +21,7 @@
 }
 
 section:not(.home) {
-    padding: 80px 0;
+    padding: 130px 0;
 }
 
 .title-section {
@@ -25,16 +29,21 @@ section:not(.home) {
     margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
+    color: #3C3B3B;
 }
 
 
 /* HEADER */
 header {
+    position: fixed;
+    z-index: 999999;
+    width: 100vw;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
+    box-shadow: 0 0 10px #00000024;
 }
 
 header nav.menu-desktop ul {
@@ -46,14 +55,13 @@ header nav.menu-desktop ul li a {
     text-transform: uppercase;
     font-weight: bold;
     color: #3C3B3B;
-    padding: 100% 15px;
+    padding: 42.5px 15px;
     transition: .2s;
 }
 
 header nav.menu-desktop ul li a:hover {
-    background-color: #3C3B3B;
+    background-color: #FF7200;
     color: #fff;
-
 }
 
 
@@ -62,7 +70,7 @@ section.home {
     position: relative;
     background: url('../img/banner-home.jpg') no-repeat center center;
     background-size: cover;
-    height: 85.2vh;
+    height: 95vh;
 }
 
 .home .overlay {
@@ -112,10 +120,6 @@ section.menu {
     background-color: #F9F9F9;
 }
 
-section.menu .title-section {
-    color: #3C3B3B;
-}
-
 .menu .container-menu {
     display: flex;
     align-items: center;
@@ -131,10 +135,10 @@ section.menu .title-section {
 }
 
 .menu .item-menu:hover .capa .overlay {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-.menu .item-menu:hover .capa img {transform: scale(1.05);}
+.menu .item-menu:hover .capa .img-capa {transform: scale(1.05);}
 
 .menu .item-menu .capa {
     position: relative;
@@ -154,9 +158,34 @@ section.menu .title-section {
     opacity: 0;
     transition: .5s;
     z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.menu .item-menu .capa img {
+.menu .item-menu .capa .overlay .texto {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 50px;
+    transition: 0.5s;
+}
+
+.menu .item-menu:hover .capa .overlay .texto {
+    gap: 10px;
+}
+
+.menu .item-menu .capa .overlay .icon {
+    width: 40px;
+    filter: invert(1);
+}
+
+.menu .item-menu .capa .overlay p {
+    color: #fff;
+}
+
+.menu .item-menu .capa .img-capa {
     width: 100%;
     border-radius: 100%;
     transition: 0.5s;
@@ -172,4 +201,181 @@ section.menu .title-section {
     font-weight: 200;
     margin-top: 30px;
     line-height: 1.4;
+}
+
+
+/* GALERIA DE FOTOS */
+.galeria .container-fotos {
+    margin-top: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria .container-fotos figure {
+    position: relative;
+    flex-basis: 280px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.galeria .container-fotos figure::after {
+    content: "\F52A";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    background-color: #FF7200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+
+    opacity: 0;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 3em;
+    transition: .5s;
+}
+
+.galeria .container-fotos figure:hover::after {
+    opacity: 0.7;
+}
+
+.galeria .container-fotos figure img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+/* CONTATO */
+section.contato {
+    background-color: #3C3B3B;
+    color: #fff;
+}
+
+.contato .title-section {
+    color: #fff !important;
+}
+
+.contato .container-contact {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+
+}
+
+.contato .container-contact .formulario {
+    flex-basis: 50%;
+}
+
+.contato .container-contact .formulario input, textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin: 5px 0;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.contato .container-contact .formulario input:focus, textarea:focus {
+    box-shadow: 0 0 8px #FF7200;
+    color: #FF7200;
+}
+
+.contato .container-contact .formulario input[type='submit'] {
+    width: 150px;
+    border-radius: 2px;
+    color: #757575;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contato .container-contact .formulario input[type='submit']:hover {
+    background-color: #FF7200;
+    color: #fff;
+}
+
+.contato .container-contact .info-contact ul li {
+    color: #757575;
+    font-weight: 300;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.contato .container-contact .info-contact .buttons-group {
+    margin: 20px 0;
+}
+
+.contato .container-contact .info-contact .buttons-group .btn-social {
+    position: relative;
+    margin-right: 5px;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    background-color: #FF7200;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contato .container-contact .info-contact .buttons-group .btn-social i {
+    position: sticky;
+    z-index: 10;
+}
+
+.contato .container-contact .info-contact .btn-social::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    transform-origin: center;
+    transition: .5s;
+    z-index: 5;
+}
+
+.contato .container-contact .info-contact .btn-social:hover {
+    color: #FF7200;
+}
+
+.contato .container-contact .info-contact .btn-social:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* RODAPÉ */
+footer {
+    padding: 20px 0;
+    color: #3C3B3B;
+    font-weight: 300;
+}
+
+footer .interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .copy span {
+    font-weight: 500;
+}
+
+footer .dev a {
+    color: #3C3B3B;
+}
+
+footer .dev a:hover {
+    color: #FF7200;
 }
