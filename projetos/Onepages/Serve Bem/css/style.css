@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --salmon: #F29456;
+    --fundo-cardapio: #E3E3E3;
+    --fundo-galeria: #36312B;
+    --fundo-faq: #36312B;
+    --fundo-contato: #F29456;
+}
