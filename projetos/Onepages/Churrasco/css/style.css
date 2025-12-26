@@ -64,6 +64,51 @@ header nav.menu-desktop ul li a:hover {
     color: #fff;
 }
 
+header .btn-menu-mobile {
+    cursor: pointer;
+}
+
+header .btn-menu-mobile .line {
+    background-color: #3C3B3B;
+    width: 26px;
+    height: 5px;
+    margin: 3px 0;
+    border-radius: 20px;
+}
+
+header .btn-menu-mobile {
+    display: none;
+}
+
+header .menu-mobile {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    background-color: #3C3B3B;
+    width: 300px;
+    height: 100vh;
+    box-shadow: 0 0 10px #000000c0;
+    transition: .5s;
+}
+
+header .menu-mobile.ativo {
+    left: 0;
+}
+
+header .menu-mobile a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #00000034;
+    width: 100%;
+    transition: .1s;
+}
+
+header .menu-mobile a:hover {
+    background-color: #FF7200;
+}
+
 
 /* HOME */
 section.home {
