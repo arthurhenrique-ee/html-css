@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serve Bem</title>
 
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -16,7 +13,100 @@
 </head>
 <body>
     
-    
+    <header>
+        <figure class="logo">
+            <a href="#home"><img src="img/logo.png" alt="Restaurante Serve Bem"></a>
+        </figure><!-- LOGO -->
+
+        <nav class="menu-desktop">
+            <a href="#home">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#galeria">Galeria de Fotos</a>
+            <a href="#faq">Perguntas Frequentes</a>
+            <a href="#contato">Contato</a>
+        </nav><!-- MENU DESKTOP -->
+
+        <div class="btn-menu-mobile">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div><!-- BOTÃO MENU MOBILE -->
+
+        <div class="menu-mobile">
+            <a href="#home">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#galeria">Galeria de Fotos</a>
+            <a href="#faq">Perguntas Frequentes</a>
+            <a href="#contato">Contato</a>
+        </div><!-- MENU MOBILE -->
+    </header>
+
+    <main>
+
+        <section class="home" id="home">
+            <div class="overlay"></div>
+
+            <div class="texto-home">
+                <h1>Serve Bem</h1>
+                <h2>O sabor que você merece.</h2>
+            </div>
+        </section><!-- INÍCIO -->
+
+        <section class="cardapio" id="cardapio">
+            <div class="interface">
+
+                <h1 class="title-section">Cardápio</h1>
+
+                <div class="content">
+
+                    <div class="card menu-camarao">
+                        <div class="fundo-card">
+                            <img src="img/cardapio/camarao.jpg" alt="Camarão">
+                        </div>
+                        <div class="title-card">
+                            <h2>Camarão</h2>
+                            <p>Futos do Mar</p>
+                        </div>
+                        <div class="info">
+                            <p>Digite aqui a descrição do produto acima.</p>
+                            <a href="#galeria">Veja mais</a>
+                        </div>
+                    </div><!-- CAMARÃO CARD 1-->
+
+                    <div class="card menu-sobremesas">
+                        <div class="fundo-card">
+                            <img src="img/cardapio/sobremesas.jpg" alt="Sobremesas">
+                        </div>
+                        <div class="title-card">
+                            <h2>Sobremesas</h2>
+                            <p>Sorvetes e Frutas</p>
+                        </div>
+                        <div class="info">
+                            <p>Digite aqui a descrição do produto acima.</p>
+                            <a href="#galeria">Veja mais</a>
+                        </div>
+                    </div><!-- SOBREMESAS CARD 2-->
+
+                    <div class="card menu-bebidas">
+                        <div class="fundo-card">
+                            <img src="img/cardapio/bebidas.jpg" alt="Bebidas">
+                        </div>
+                        <div class="title-card">
+                            <h2>Bebidas</h2>
+                            <p>Vinhos e Cervejas</p>
+                        </div>
+                        <div class="info">
+                            <p>Digite aqui a descrição do produto acima.</p>
+                            <a href="#galeria">Veja mais</a>
+                        </div>
+                    </div><!-- BEBIDAS CARD 3 -->
+
+                </div>
+
+            </div>
+        </section><!-- CARDÁPIO -->
+
+    </main>
 
 </body>
 </html>
