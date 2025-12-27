@@ -19,6 +19,10 @@
     font-family: "Open Sans", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .interface {
     max-width: 1280px;
     padding: 0 5%;
