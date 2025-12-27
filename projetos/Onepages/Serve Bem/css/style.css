@@ -79,10 +79,47 @@ header nav.menu-desktop a:hover::after {
 
 header .btn-menu-mobile {
     display: none;
+    cursor: pointer;
+}
+
+header .btn-menu-mobile .line {
+    background-color: #36312B;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+header .btn-menu-mobile .line.active {
+    background-color: #F29456;
 }
 
 header nav.menu-mobile {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: -400px;
+    background-color: #36312B;
+    height: 100vh;
+    width: 350px;
+    transition: .5s;
+}
+
+header nav.menu-mobile.active {
+    left: 0;
+}
+
+header nav.menu-mobile a {
+    display: block;
+    text-decoration: none;
+    color: #FBE8DC;
+    padding: 10px 25px;
+    border-bottom: 1px solid #fbe8dc1c;
+    transition: .2s;
+}
+
+header nav.menu-mobile a:hover {
+    background-color: #F29456;
 }
 
 main {
