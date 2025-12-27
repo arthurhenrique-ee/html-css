@@ -40,11 +40,17 @@ section {
 
 /* HEADER */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
     background-color: #fff;
+    box-shadow: 0 0px 10px #00000020;
 }
 
 header nav.menu-desktop a {
@@ -75,13 +81,17 @@ header nav.menu-mobile {
     display: none;
 }
 
+main {
+    padding-top: 100px;
+}
+
 
 /* HOME */
 .home {
     position: relative;
-    background: url('../img/banner-home.jpg') no-repeat center center;
+    background: url('../img/banner-home.jpg') no-repeat top center;
     background-size: cover;
-    height: 85vh;
+    height: 86vh;
 }
 
 .home .texto-home {
@@ -102,7 +112,7 @@ header nav.menu-mobile {
 
 .home .texto-home h2 {
     font-size: 18px;
-    letter-spacing: 10px;
+    letter-spacing: 12px;
     font-weight: 400;
     text-shadow: 0 0 10px #00000085;
 }
@@ -326,13 +336,147 @@ header nav.menu-mobile {
 }
 
 .faq .perguntas li p {
-    display: none;
-    padding-top: 10px;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
     color: #9f9f9f;
     font-size: 14px;
     font-weight: 300;
+    transition: .5s;
 }
 
 .faq .perguntas li p.active {
+    padding-top: 10px;
+    height: 30px;
+    opacity: 1;
+}
+
+
+
+/* CONTATO */
+.contato {
+    background-color: var(--fundo-contato);
+}
+
+.contato .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contato .info h2 {
+    color: #36312B;
+    font-weight: 400;
+}
+
+.contato .info h2 span {
+    font-weight: bold;
+}
+
+.contato nav {
+    margin: 25px 0;
+}
+
+.contato nav a {
     display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+}
+
+.contato nav a:hover {
+    color: #36312B;
+}
+
+.contato .btns-social .social {
+    background-color: #FBE8DC;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 50%;
+    color: #F29456;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.contato .btns-social .social:hover {
+    background-color: #36312B;
+    color: #FBE8DC;
+}
+
+.contato .copy {
+    color: #fff;
+    border-top: 1px solid #ffffff40;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.contato .dev {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.contato .dev a {
+    text-decoration: none;
+    color: #36312B;
+    font-weight: 700;
+}
+
+.contato .dev a:hover {
+    text-decoration: underline;
+}
+
+.contato .formulario {
+    flex-basis: 50%;
+    border-left: 1px solid #ffffff40;
+    padding: 0 30px;
+}
+
+.contato .formulario h2 {
+    color: #36312B;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contato .formulario input:not(.submit), textarea {
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px #00000042;
+    background-color: #FBE8DC;
+}
+
+.contato .formulario input:not(.submit):focus, textarea:focus {
+    background-color: #36312B;
+    color: #FBE8DC;
+}
+
+.contato .formulario textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contato input.submit {
+    background-color: #36312B;
+    border: none;
+    outline: none;
+    color: #FBE8DC;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contato input.submit:hover {
+    background-color: #A10101;
 }
