@@ -26,16 +26,14 @@ header {
 }
 
 header h1 {
-    border: 1px dotted #000;
     flex: 0 0 200px;
+    text-shadow: 1px 1px 0px #00000072;
 }
 
 header nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-
-    border: 1px dotted #000;
 }
 
 header nav a {
