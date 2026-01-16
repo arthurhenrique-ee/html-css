@@ -1,0 +1,426 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ESTILIZAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.interface {
+    max-width: 1380px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section:not(.home) {
+    padding: 130px 0;
+}
+
+.title-section {
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3C3B3B;
+}
+
+
+/* HEADER */
+header {
+    position: fixed;
+    z-index: 999999;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-shadow: 0 0 10px #00000024;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+}
+
+header nav.menu-desktop ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3C3B3B;
+    padding: 42.5px 15px;
+    transition: .2s;
+}
+
+header nav.menu-desktop ul li a:hover {
+    background-color: #FF7200;
+    color: #fff;
+}
+
+header .btn-menu-mobile {
+    cursor: pointer;
+}
+
+header .btn-menu-mobile .line {
+    background-color: #3C3B3B;
+    width: 26px;
+    height: 5px;
+    margin: 3px 0;
+    border-radius: 20px;
+}
+
+header .btn-menu-mobile {
+    display: none;
+}
+
+header .menu-mobile {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    background-color: #3C3B3B;
+    width: 300px;
+    height: 100vh;
+    box-shadow: 0 0 10px #000000c0;
+    transition: .5s;
+}
+
+header .menu-mobile.ativo {
+    left: 0;
+}
+
+header .menu-mobile a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #00000034;
+    width: 100%;
+    transition: .1s;
+}
+
+header .menu-mobile a:hover {
+    background-color: #FF7200;
+}
+
+
+/* HOME */
+section.home {
+    position: relative;
+    background: url('../img/banner-home.jpg') no-repeat center center;
+    background-size: cover;
+    height: 95vh;
+}
+
+.home .overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
+
+.home #texto-home {
+    position: absolute;
+    z-index: 10;
+
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home #texto-home h1 {
+    font-size: 90px;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 8px #00000098;
+}
+
+.home #texto-home h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 20px;
+}
+
+
+/* CARDÁPIO */
+section.menu {
+    background-color: #F9F9F9;
+}
+
+.menu .container-menu {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.menu .item-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.menu .item-menu:hover .capa .overlay {
+    opacity: 0.7;
+}
+
+.menu .item-menu:hover .capa .img-capa {transform: scale(1.05);}
+
+.menu .item-menu .capa {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.menu .item-menu .capa .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #FF7200;
+    opacity: 0;
+    transition: .5s;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .item-menu .capa .overlay .texto {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 50px;
+    transition: 0.5s;
+}
+
+.menu .item-menu:hover .capa .overlay .texto {
+    gap: 10px;
+}
+
+.menu .item-menu .capa .overlay .icon {
+    width: 40px;
+    filter: invert(1);
+}
+
+.menu .item-menu .capa .overlay p {
+    color: #fff;
+}
+
+.menu .item-menu .capa .img-capa {
+    width: 100%;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.menu .item-menu .descricao h2 {
+    color: #FF7200;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.menu .item-menu .descricao p {
+    font-weight: 200;
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+
+/* GALERIA DE FOTOS */
+.galeria .container-fotos {
+    margin-top: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria .container-fotos figure {
+    position: relative;
+    flex-basis: 280px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.galeria .container-fotos figure::after {
+    content: "\F52A";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    background-color: #FF7200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+
+    opacity: 0;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 3em;
+    transition: .5s;
+}
+
+.galeria .container-fotos figure:hover::after {
+    opacity: 0.7;
+}
+
+.galeria .container-fotos figure img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+/* CONTATO */
+section.contato {
+    background-color: #3C3B3B;
+    color: #fff;
+}
+
+.contato .title-section {
+    color: #fff !important;
+}
+
+.contato .container-contact {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+
+}
+
+.contato .container-contact .formulario {
+    flex-basis: 50%;
+}
+
+.contato .container-contact .formulario input, textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin: 5px 0;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.contato .container-contact .formulario input:focus, textarea:focus {
+    box-shadow: 0 0 8px #FF7200;
+    color: #FF7200;
+}
+
+.contato .container-contact .formulario input[type='submit'] {
+    width: 150px;
+    border-radius: 2px;
+    color: #757575;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contato .container-contact .formulario input[type='submit']:hover {
+    background-color: #FF7200;
+    color: #fff;
+}
+
+.contato .container-contact .info-contact ul li {
+    color: #757575;
+    font-weight: 300;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.contato .container-contact .info-contact .buttons-group {
+    margin: 20px 0;
+}
+
+.contato .container-contact .info-contact .buttons-group .btn-social {
+    position: relative;
+    margin-right: 5px;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    background-color: #FF7200;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contato .container-contact .info-contact .buttons-group .btn-social i {
+    position: sticky;
+    z-index: 10;
+}
+
+.contato .container-contact .info-contact .btn-social::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    transform-origin: center;
+    transition: .5s;
+    z-index: 5;
+}
+
+.contato .container-contact .info-contact .btn-social:hover {
+    color: #FF7200;
+}
+
+.contato .container-contact .info-contact .btn-social:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* RODAPÉ */
+footer {
+    padding: 20px 0;
+    color: #3C3B3B;
+    font-weight: 300;
+}
+
+footer .interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .copy span {
+    font-weight: 500;
+}
+
+footer .dev a {
+    color: #3C3B3B;
+}
+
+footer .dev a:hover {
+    color: #FF7200;
+}

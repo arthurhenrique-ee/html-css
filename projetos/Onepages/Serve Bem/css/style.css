@@ -1,0 +1,523 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --salmon: #F29456;
+    --fundo-cardapio: #E3E3E3;
+    --fundo-galeria: #36312B;
+    --fundo-faq: #EFEFEF;
+    --fundo-contato: #F29456;
+}
+
+
+/* ESTILIZAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.interface {
+    max-width: 1280px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.title-section {
+    text-transform: uppercase;
+    color: #F29456;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background-color: #fff;
+    box-shadow: 0 0px 10px #00000020;
+}
+
+header nav.menu-desktop a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #36312bc9;
+    padding: 42px 15px;
+}
+
+header nav.menu-desktop a:hover {color: #F29456;}
+
+header nav.menu-desktop a:hover::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: #F29456;
+    width: 100%;
+    height: 5px;
+}
+
+header .btn-menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+header .btn-menu-mobile .line {
+    background-color: #36312B;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+header .btn-menu-mobile .line.active {
+    background-color: #F29456;
+}
+
+header nav.menu-mobile {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    background-color: #36312B;
+    height: 100vh;
+    width: 350px;
+    transition: .5s;
+}
+
+header nav.menu-mobile.active {
+    left: 0;
+}
+
+header nav.menu-mobile a {
+    display: block;
+    text-decoration: none;
+    color: #FBE8DC;
+    padding: 10px 25px;
+    border-bottom: 1px solid #fbe8dc1c;
+    transition: .2s;
+}
+
+header nav.menu-mobile a:hover {
+    background-color: #F29456;
+}
+
+main {
+    padding-top: 100px;
+}
+
+
+/* HOME */
+.home {
+    position: relative;
+    background: url('../img/banner-home.jpg') no-repeat top center;
+    background-size: cover;
+    height: 86vh;
+}
+
+.home .texto-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .texto-home h1 {
+    font-size: 80px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00000085;
+}
+
+.home .texto-home h2 {
+    font-size: 18px;
+    letter-spacing: 12px;
+    font-weight: 400;
+    text-shadow: 0 0 10px #00000085;
+}
+
+
+/* CARDÁPIO */
+.cardapio {
+    background-color: var(--fundo-cardapio);
+}
+
+.cardapio .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cardapio .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    box-shadow: 0 0 10px #00000047;
+}
+
+.cardapio .card .fundo-card img {
+    width: 110%;
+    height: 100%;
+    opacity: 0.5;
+    transition: .7s;
+}
+
+.cardapio .card:hover .fundo-card img {
+    opacity: 0.2;
+}
+
+.cardapio .card .title-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    transition: .7s;
+}
+
+.cardapio .card:hover .title-card {
+    top: 30%;
+}
+
+.cardapio .card .title-card h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.cardapio .card .title-card h2::after {
+    content: "";
+    display: block;
+    background-color: #F29456;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+    transition: .7s;
+}
+
+.cardapio .card:hover .title-card h2::after {
+    height: 10px;
+}
+
+.cardapio .card .title-card p {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.cardapio .card .info-card {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    opacity: 0;
+    width: 100%;
+    padding: 0 30px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    transition: .7s;
+}
+
+.cardapio .card:hover .info-card {
+    bottom: 20%;
+    opacity: 1;
+}
+
+.cardapio .card .info-card p {
+    margin-bottom: 20px;
+}
+
+.cardapio .card .info-card a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    background-color: #F29456;
+    padding: 5px 15px;
+    border-radius: 30px;
+    transition: .2s
+}
+
+.cardapio .card .info-card a:hover {
+    background-color: #36312B;
+}
+
+
+/* GALERIA DE FOTOS */
+.galeria {
+    background-color: var(--fundo-galeria);
+}
+
+.galeria .interface {
+    max-width: 1500px;
+}
+
+.galeria .content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria figure {
+    position: relative;
+    background-color: #000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.galeria figure:hover img {
+    opacity: 0.3;
+}
+
+.galeria figure:hover i {
+    opacity: 1;
+    top: 50%;
+}
+
+.galeria figure i {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    font-size: 2em;
+    opacity: 0;
+    transition: .3s;
+}
+
+.galeria figure img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+
+
+/* PERGUNTAS FREQUENTES */
+.faq {
+    background-color: var(--fundo-faq);
+}
+
+.faq .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.faq .foto-faq img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #00000030;
+}
+
+.faq .perguntas {
+    position: absolute;
+    max-width: 800px;
+    left: 300px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.faq .perguntas li {
+    position: relative;
+    margin: 20px 30px
+}
+
+.faq .perguntas li h2 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 40px 10px 0;
+    color: #9f9f9f;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.faq .perguntas li span {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: #9f9f9f;
+    cursor: pointer;
+}
+
+.faq .perguntas li span.active {
+    color: #F29456;
+}
+
+.faq .perguntas li p {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: #9f9f9f;
+    font-size: 14px;
+    font-weight: 300;
+    transition: .5s;
+}
+
+.faq .perguntas li p.active {
+    padding-top: 10px;
+    height: 30px;
+    opacity: 1;
+}
+
+
+
+/* CONTATO */
+.contato {
+    background-color: var(--fundo-contato);
+}
+
+.contato .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contato .info h2 {
+    color: #36312B;
+    font-weight: 400;
+}
+
+.contato .info h2 span {
+    font-weight: bold;
+}
+
+.contato nav {
+    margin: 25px 0;
+}
+
+.contato nav a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+}
+
+.contato nav a:hover {
+    color: #36312B;
+}
+
+.contato .btns-social .social {
+    background-color: #FBE8DC;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 50%;
+    color: #F29456;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.contato .btns-social .social:hover {
+    background-color: #36312B;
+    color: #FBE8DC;
+}
+
+.contato .copy {
+    color: #fff;
+    border-top: 1px solid #ffffff40;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.contato .dev {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.contato .dev a {
+    text-decoration: none;
+    color: #36312B;
+    font-weight: 700;
+}
+
+.contato .dev a:hover {
+    text-decoration: underline;
+}
+
+.contato .formulario {
+    flex-basis: 50%;
+    border-left: 1px solid #ffffff40;
+    padding: 0 30px;
+}
+
+.contato .formulario h2 {
+    color: #36312B;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contato .formulario input:not(.submit), textarea {
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px #00000042;
+    background-color: #FBE8DC;
+}
+
+.contato .formulario input:not(.submit):focus, textarea:focus {
+    background-color: #36312B;
+    color: #FBE8DC;
+}
+
+.contato .formulario textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contato input.submit {
+    background-color: #36312B;
+    border: none;
+    outline: none;
+    color: #FBE8DC;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contato input.submit:hover {
+    background-color: #A10101;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grill Menu</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css" media="screen">
+
+    <!-- JS -->
+    <script src="js/menu-mobile.js" defer></script>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <header>
+        <figure class="logo">
+            <a href="#" style="text-decoration: none;">
+                <img src="img/logo.png" alt="Grill Menu Churrasco">
+            </a>
+        </figure>
+
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn-menu-mobile">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+
+        <nav class="menu-mobile">
+            <a href="#home">Início</a>
+            <a href="#menu">Cardápio</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="home" id="home">
+            <div class="overlay"></div>
+            <div id="texto-home">
+                <h1>Churrasco</h1>
+                <h2>Carne de Qualidade</h2>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <div class="interface">
+
+                <div class="title-section">
+                    <h1><i class="bi bi-fork-knife"></i> Cardápio</h1>
+                </div>
+
+                <div class="container-menu">
+
+                    <article class="item-menu">
+                        <figure class="capa">
+                            <div class="overlay">
+                                <div class="texto">
+                                    <img class="icon" src="img/icons/carnes.png" alt="Carne">
+                                    <p>Carnes</p>
+                                </div>
+                            </div>
+                            <img class="img-capa" src="img/cardapio/1.jpg" alt="Carne de Boi">
+                        </figure>
+
+                        <div class="descricao">
+                            <h2>Carnes</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </article>
+
+                    <article class="item-menu">
+                        <figure class="capa">
+                            <div class="overlay">
+                                <div class="texto">
+                                    <img class="icon" src="img/icons/sobremesas.png" alt="Torta Doce">
+                                    <p>Sobremesas</p>
+                                </div>
+                            </div>
+                            <img class="img-capa" src="img/cardapio/2.jpg" alt="Banana Frita">
+                        </figure>
+
+                        <div class="descricao">
+                            <h2>Sobremesas</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </article>
+
+                    <article class="item-menu">
+                        <figure class="capa">
+                            <div class="overlay">
+                                <div class="texto">
+                                    <img class="icon" src="img/icons/bebidas.png" alt="Cerveja">
+                                    <p>Bebidas</p>
+                                </div>
+                            </div>
+                            <img class="img-capa" src="img/cardapio/3.jpg" alt="Copo de Cerveja">
+                        </figure>
+
+                        <div class="descricao">
+                            <h2>Bebidas</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria" id="galeria">
+            <div class="interface">
+                <div class="title-section">
+                    <h1><i class="bi bi-image"></i> Galeria de Fotos</h1>
+                </div>
+
+                <div class="container-fotos">
+                    <figure><img src="img/galeria/1.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/2.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/3.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/4.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/5.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/6.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/7.jpg" alt=""></figure>
+                    <figure><img src="img/galeria/8.jpg" alt=""></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="interface">
+                <div class="title-section">
+                    <h1><i class="bi bi-envelope-fill"></i> Fale Conosco</h1>
+                </div>
+
+                <div class="container-contact">
+
+                    <form class="formulario" action="#">
+                        <div class="form-group">
+                            <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="assunto" id="assunto" placeholder="Assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="msg" id="msg" placeholder="Deixe sua mensagem"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar">
+                    </form>
+
+                    <div class="info-contact">
+                        <ul>
+                            <li>contato@seusite</li>
+                            <li>21 0000-0000</li>
+                            <li>21 90000-0000</li>
+                            <li>Local: Av. Rio de janeiro</li>
+                            <li>Atendimento: Segunda a Sexta</li>
+                            <li>9:00 às 18:00</li>
+                        </ul>
+
+                        <div class="buttons-group">
+                            <button class="btn-social"><i class="bi bi-facebook"></i></button>
+                            <button class="btn-social"><i class="bi bi-twitter"></i></button>
+                            <button class="btn-social"><i class="bi bi-instagram"></i></button>
+                            <button class="btn-social"><i class="bi bi-whatsapp"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="interface">
+                <p class="copy"><span>Copyright &copy; Grill Menu</span> • 2025 Todos os Direitos Reservados.</p>
+                <p class="dev">Design: <a href="#">Arthur Gunes</a></p>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
